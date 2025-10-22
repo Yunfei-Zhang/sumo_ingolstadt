@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<configuration>
+   <input>
+      <net-file value="ingolstadt_24h.net.xml.gz" />
+      <route-files value="adapted_parked_vehicles.rou.xml, motorized_routes_2020-09-16_24h.rou.xml.gz" />
+      <additional-files value="tlLogics_WAUT_2020-09-16_24h.add.xml, ingolstadt.poly.xml.gz, parking.add.xml, edge_lane_output.xml" />
+   </input>
+   <time>
+      <begin value="21100" />
+      <end value="25200" />
+   </time>
+   <processing>
+      <step-length value="1" />
+      <ignore-junction-blocker value="15" />
+      <time-to-teleport value="300" />
+      <max-depart-delay value="100" />
+      <device.rerouting.probability value="0" />
+   </processing>
+   <output>
+      <edgeData id="edge_data" file="runs\24h_parking_sim_21600_25200_0.02_distance_25\edgeData.xml" freq="300" />
+      <laneData id="lane_data" file="runs\24h_parking_sim_21600_25200_0.02_distance_25\laneData.xml" freq="300" />
+   </output>
+</configuration>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <additional>
-    <edgeData id="edge_data_300" file="C:\Users\ge73leb\repo\vaas\runs\24h_parking_sim_21600_25200_0.02_distance_25\edge_data_300.xml" freq="300" />
-    <edgeData id="edge_data_300_internal" file="C:\Users\ge73leb\repo\vaas\runs\24h_parking_sim_21600_25200_0.02_distance_25\edge_data_300_internal.xml" freq="300" withInternal="true" />
-    <laneData id="lane_data_300" file="C:\Users\ge73leb\repo\vaas\runs\24h_parking_sim_21600_25200_0.02_distance_25\lane_data_300.xml" freq="300" />
-    <laneData id="lane_data_300_internal" file="C:\Users\ge73leb\repo\vaas\runs\24h_parking_sim_21600_25200_0.02_distance_25\lane_data_300_internal.xml" freq="300" withInternal="true" />   
+    <edgeData id="edge_data_300" file="C:\Users\ge73leb\repo\avas\runs\24h_parking_sim_21601_25200_0.02_cv_25\edge_data_300.xml" freq="300" />
+    <edgeData id="edge_data_300_internal" file="C:\Users\ge73leb\repo\avas\runs\24h_parking_sim_21601_25200_0.02_cv_25\edge_data_300_internal.xml" freq="300" withInternal="true" />
+    <laneData id="lane_data_300" file="C:\Users\ge73leb\repo\avas\runs\24h_parking_sim_21601_25200_0.02_cv_25\lane_data_300.xml" freq="300" />
+    <laneData id="lane_data_300_internal" file="C:\Users\ge73leb\repo\avas\runs\24h_parking_sim_21601_25200_0.02_cv_25\lane_data_300_internal.xml" freq="300" withInternal="true" />   
 </additional>

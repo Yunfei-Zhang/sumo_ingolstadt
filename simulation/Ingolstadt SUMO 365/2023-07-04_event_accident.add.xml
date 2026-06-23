@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Event 2 (supply shortage): accident closing the busiest LDD-instrumented
+     primary arterial 29119849#1 (53 m, ~97 veh/km morning peak) from 08:00 to
+     09:30 (28800-34200 s). docs/5_rq3_event_scenarios.md sec 4. -->
+<additional>
+  <rerouter id="accident_0704" edges="29119849#1">
+    <interval begin="28800" end="34200">
+      <closingReroute id="29119849#1"/>
+    </interval>
+  </rerouter>
+</additional>

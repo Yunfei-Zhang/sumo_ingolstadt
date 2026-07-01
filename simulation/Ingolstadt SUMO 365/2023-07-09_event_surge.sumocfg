@@ -1,11 +1,21 @@
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
-  <!-- Event 1 (demand surge): 2023-07-09 base demand + football-match surge near
-       Audi Sportpark (KO 15:30). Surge trips appended to route-files; SUMO routes
-       each trip at insertion. docs/5_rq3_event_scenarios.md sec 3. -->
+  <!-- Event 1 (demand surge): football-match surge near Audi Sportpark (KO 15:30).
+       Surge trips appended to route-files; SUMO routes each trip at insertion.
+       docs/5_rq3_event_scenarios.md sec 3.
+
+       BACKGROUND SUBSTITUTION (2026-07-01): the calibrated 2023-07-09 base demand
+       is corrupt — truncated to 06:00-08:00 (5,983 veh vs ~177k for a full day),
+       committed broken across all refs incl. upstream, with no recoverable copy and
+       no in-repo calibration pipeline (see memory surge_demand_file_corrupt). Per
+       docs/5 the surge only needs a realistic Sunday background, so we substitute the
+       FULL, internally-consistent 2023-07-02 Sunday calibration (routes + TL + WAUT +
+       PT) and inject the SAME stadium surge. Both days are Sundays; all files are from
+       the same date, so no per-day cross-wiring (sumo_ingolstadt/CLAUDE.md). The
+       no-surge baseline for this event is therefore plain 2023-07-02. -->
   <input>
     <net-file value="ingolstadt_net.net.xml" />
-    <route-files value="Routes/routes_2023-07-09_24h_det_calib.rou.xml.gz, 2023-07-09_event_surge.trips.xml" />
-    <additional-files value="TL/2023-07-09_tlLogics_24h.tll.xml, TL/2023-07-09_WAUT.xml, PT/pt_stops.add.xml, PT/2023-07-09_gtfs_trips.rou.xml" />
+    <route-files value="Routes/routes_2023-07-02_24h_det_calib.rou.xml.gz, 2023-07-09_event_surge.trips.xml" />
+    <additional-files value="TL/2023-07-02_tlLogics_24h.tll.xml, TL/2023-07-02_WAUT.xml, PT/pt_stops.add.xml, PT/2023-07-02_gtfs_trips.rou.xml" />
   </input>
   <time>
     <begin value="00:00:00" />

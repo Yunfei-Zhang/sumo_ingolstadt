@@ -1,0 +1,17 @@
+<!-- AMoD vehicle type for the predictive-routing co-simulation (RQ3 / paper 2).
+
+     The id must match both the FleetPy vehicle-type file
+     (fleetpy/data/vehicles/amod.csv) and the study's op_fleet_composition
+     entry ("amod:100"), otherwise SUMO rejects the vehicles FleetPy inserts
+     over TraCI.
+
+     Rerouting is disabled on purpose: FleetPy owns routing for these vehicles
+     and assigns their routes explicitly. Leaving SUMO's rerouting device on
+     would let SUMO re-route them behind FleetPy's back, which would silently
+     destroy the R1-versus-R2 contrast this study measures. Background traffic
+     keeps its own rerouting probability, set in the .sumocfg. -->
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <vType id="amod" vClass="passenger" color="blue" desiredMaxSpeed="36.11">
+        <param key="has.rerouting.device" value="false"/>
+    </vType>
+</additional>

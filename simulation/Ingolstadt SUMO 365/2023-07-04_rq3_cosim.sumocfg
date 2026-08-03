@@ -1,0 +1,43 @@
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+  <!-- Predictive-routing co-simulation (RQ3 / paper 2), test day 2023-07-04.
+       Driven by FleetPy via fleetpy/src/coupling/SUMO/SUMOFleetPyServer.py,
+       NOT by the vaas run.py.
+
+       Differs from plain 2023-07-04.sumocfg only in the calibration settings,
+       which are aligned with the vaas simulation config the travel-time
+       predictor was trained on (configs/prediction/rq2_sims/*.yaml):
+         scale                          1.0 to 0.85
+         device.rerouting.probability   0.7 to 0.5
+         time-to-teleport               240 to 60
+       Without this the routing runs would not be comparable to the
+       simulations the predictor learned from.
+
+       The background demand is deliberately UNCHANGED from the plain config:
+       per the settled D-demand decision the AMoD requests are layered on top,
+       not absorbed out of the background, so the no-AMoD baseline stays
+       directly comparable.
+
+       rq3_amod_vtype.add.xml declares the "amod" vType that FleetPy's
+       dispatched vehicles enter with. Note that SUMOFleetPyServer passes its
+       generated edgeData config via -a, and SUMO's -a REPLACES this list
+       rather than extending it; the server merges these entries back in
+       (src/coupling/SUMO/sumocfg_utils.py). Without that merge the traffic
+       lights, WAUT and public transport below are silently dropped. -->
+  <input>
+    <net-file value="ingolstadt_net.net.xml" />
+    <route-files value="Routes/routes_2023-07-04_24h_det_calib.rou.xml.gz" />
+    <additional-files value="TL/2023-07-04_tlLogics_24h.tll.xml, TL/2023-07-04_WAUT.xml, PT/pt_stops.add.xml, PT/2023-07-04_gtfs_trips.rou.xml, rq3_amod_vtype.add.xml" />
+  </input>
+  <time>
+    <begin value="00:00:00" />
+    <end value="24:00:00" />
+  </time>
+  <processing>
+    <step-length value="1" />
+    <scale value="0.85" />
+    <ignore-junction-blocker value="15" />
+    <time-to-teleport value="60" />
+    <max-depart-delay value="100" />
+    <device.rerouting.probability value="0.5" />
+  </processing>
+</configuration>

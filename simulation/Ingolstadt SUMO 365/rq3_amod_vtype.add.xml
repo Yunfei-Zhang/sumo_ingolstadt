@@ -14,4 +14,13 @@
     <vType id="amod" vClass="passenger" color="blue" desiredMaxSpeed="36.11">
         <param key="has.rerouting.device" value="false"/>
     </vType>
+    <!-- Ride-hailing twin of the above. FleetPy has no non-pooling fleet-control
+         module, so "one request per vehicle" is expressed as a capacity-1 vehicle
+         type (fleetpy/data/vehicles/amod_solo.csv), which makes the pooling
+         controller degenerate to taxi dispatch. Identical to `amod` on the SUMO
+         side (capacity lives only in FleetPy), but the id has to exist here too,
+         or SUMO rejects every vehicle FleetPy inserts over TraCI. -->
+    <vType id="amod_solo" vClass="passenger" color="blue" desiredMaxSpeed="36.11">
+        <param key="has.rerouting.device" value="false"/>
+    </vType>
 </additional>

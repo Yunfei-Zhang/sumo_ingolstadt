@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Event 2 (supply shortage): accident closing the busiest LDD-instrumented
      primary arterial 29119849#1 (53 m, ~97 veh/km morning peak) from 08:00 to
-     09:30 (28800-34200 s). docs/5_rq3_event_scenarios.md sec 4. -->
+     09:30 (28800-34200 s). docs/5_rq3_event_scenarios.md sec 4.
+
+     allow="authority" is load-bearing, not decoration. Until 2026-08-08 this
+     closingReroute carried no allow/disallow, so SUMO applied no permission
+     change and the edge stayed fully passable: 1401 (baseline) vs 1404 (event)
+     vehicles entered it over the window, i.e. the closure closed nothing. The
+     attribute is what restricts the edge; keeping emergency response on it is
+     also what a real accident scene looks like.
+
+     Verified by scripts/simulation/smoke_event_closure.py: entries fall from
+     70.7 to 11.0 per 300 s bin at 28800 and the link's sampled vehicle-time
+     goes to zero. Pinned by tests/routing/test_event_injection.py. -->
 <additional>
   <rerouter id="accident_0704" edges="29119849#1">
     <interval begin="28800" end="34200">
-      <closingReroute id="29119849#1"/>
+      <closingReroute id="29119849#1" allow="authority"/>
     </interval>
   </rerouter>
 </additional>

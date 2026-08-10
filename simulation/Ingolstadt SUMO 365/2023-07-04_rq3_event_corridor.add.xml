@@ -1,113 +1,1088 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Corridor-scale lane blockage, 2023-07-04 13:00-14:00 (paper 2 event axis). Manchinger Strasse, the arterial carrying the largest share of AMoD trips (12.1%). Every blocked edge keeps enough lanes open to preserve every turn movement. -->
+<!-- Corridor-scale slowdown, 2023-07-04 13:00-14:00 (paper 2 event axis). Manchinger Strasse, the arterial carrying the largest share of AMoD trips (12.1%), restricted to 15 km/h. A speed restriction cannot strand traffic; see scripts/simulation/make_event_addfile.py for why lane blocking does not scale. -->
 <additional>
-  <rerouter id="accident_corridor_0704" edges="-146973225#1 -146973225#1.38 -146973225#2 -146973225#3 -201926267#1 -201926268#1 -233673411#0 -233673411#1 -233673414#0 -233673414#1 -233673414#2 -233673414#3 -233673414#8 -233673415#0 -233673415#1 -233673415#2 -233673415#2.19 -233673415#3 -233673416 -233673421 -266887588#0 -266887589#0 -266887589#1 -266887589#2 -266887589#3 -266887591 -266887593#1 -266887593#2 -266887593#3 -266887593#4 -266887593#6 -305496619#1 -305496619#2 -589179144 111525329 111525330#0 111525330#1 146973225#1 146973225#1.37 146973225#2 146973225#3 161680736 161680739 161680744#0 161680744#1 201926267#3 201926268#1 233673411#0 233673411#1 233673414#0 233673414#1 233673414#2 233673414#7 233673415#0 233673415#1 233673415#2 233673415#3 233673416 233673421 233673424#0 266885721#0 266885722 266885723#0 266887586 266887587 266887588#0 266887589#0 266887589#1 266887589#2 266887589#3 266887591 266887592 266887593#1 266887593#2 266887593#3 266887593#4 266887593#6 27453586#0 28593900 305496619#0 305496619#2 350320331#0 350320331#1 380271165#0 4058147#0 4058147#1 450094703 450094709 450094710 450094712 450094713 450094714 589179144 718850688 718850689 726515357 816754680">
-    <interval begin="46800" end="50400">
-      <closingLaneReroute id="-146973225#1_1" allow="authority"/>
-      <closingLaneReroute id="-146973225#1.38_1" allow="authority"/>
-      <closingLaneReroute id="-146973225#2_1" allow="authority"/>
-      <closingLaneReroute id="-146973225#3_0" allow="authority"/>
-      <closingLaneReroute id="-201926267#1_3" allow="authority"/>
-      <closingLaneReroute id="-201926268#1_3" allow="authority"/>
-      <closingLaneReroute id="-233673411#0_2" allow="authority"/>
-      <closingLaneReroute id="-233673411#1_1" allow="authority"/>
-      <closingLaneReroute id="-233673414#0_2" allow="authority"/>
-      <closingLaneReroute id="-233673414#1_3" allow="authority"/>
-      <closingLaneReroute id="-233673414#2_3" allow="authority"/>
-      <closingLaneReroute id="-233673414#3_2" allow="authority"/>
-      <closingLaneReroute id="-233673414#8_3" allow="authority"/>
-      <closingLaneReroute id="-233673415#0_2" allow="authority"/>
-      <closingLaneReroute id="-233673415#1_1" allow="authority"/>
-      <closingLaneReroute id="-233673415#1_2" allow="authority"/>
-      <closingLaneReroute id="-233673415#2_1" allow="authority"/>
-      <closingLaneReroute id="-233673415#2.19_0" allow="authority"/>
-      <closingLaneReroute id="-233673415#2.19_1" allow="authority"/>
-      <closingLaneReroute id="-233673415#3_0" allow="authority"/>
-      <closingLaneReroute id="-233673416_1" allow="authority"/>
-      <closingLaneReroute id="-233673421_1" allow="authority"/>
-      <closingLaneReroute id="-266887588#0_3" allow="authority"/>
-      <closingLaneReroute id="-266887589#0_3" allow="authority"/>
-      <closingLaneReroute id="-266887589#1_3" allow="authority"/>
-      <closingLaneReroute id="-266887589#2_3" allow="authority"/>
-      <closingLaneReroute id="-266887589#3_3" allow="authority"/>
-      <closingLaneReroute id="-266887591_3" allow="authority"/>
-      <closingLaneReroute id="-266887593#1_3" allow="authority"/>
-      <closingLaneReroute id="-266887593#2_3" allow="authority"/>
-      <closingLaneReroute id="-266887593#3_3" allow="authority"/>
-      <closingLaneReroute id="-266887593#4_3" allow="authority"/>
-      <closingLaneReroute id="-266887593#6_2" allow="authority"/>
-      <closingLaneReroute id="-305496619#1_0" allow="authority"/>
-      <closingLaneReroute id="-305496619#2_1" allow="authority"/>
-      <closingLaneReroute id="-589179144_2" allow="authority"/>
-      <closingLaneReroute id="111525329_1" allow="authority"/>
-      <closingLaneReroute id="111525330#0_3" allow="authority"/>
-      <closingLaneReroute id="111525330#1_3" allow="authority"/>
-      <closingLaneReroute id="146973225#1_1" allow="authority"/>
-      <closingLaneReroute id="146973225#1.37_1" allow="authority"/>
-      <closingLaneReroute id="146973225#2_1" allow="authority"/>
-      <closingLaneReroute id="146973225#2_2" allow="authority"/>
-      <closingLaneReroute id="146973225#3_0" allow="authority"/>
-      <closingLaneReroute id="146973225#3_1" allow="authority"/>
-      <closingLaneReroute id="161680736_1" allow="authority"/>
-      <closingLaneReroute id="161680739_3" allow="authority"/>
-      <closingLaneReroute id="161680744#0_1" allow="authority"/>
-      <closingLaneReroute id="161680744#1_1" allow="authority"/>
-      <closingLaneReroute id="201926267#3_1" allow="authority"/>
-      <closingLaneReroute id="201926268#1_3" allow="authority"/>
-      <closingLaneReroute id="233673411#0_0" allow="authority"/>
-      <closingLaneReroute id="233673411#0_1" allow="authority"/>
-      <closingLaneReroute id="233673411#1_1" allow="authority"/>
-      <closingLaneReroute id="233673411#1_3" allow="authority"/>
-      <closingLaneReroute id="233673414#0_0" allow="authority"/>
-      <closingLaneReroute id="233673414#1_0" allow="authority"/>
-      <closingLaneReroute id="233673414#2_1" allow="authority"/>
-      <closingLaneReroute id="233673414#7_0" allow="authority"/>
-      <closingLaneReroute id="233673415#0_1" allow="authority"/>
-      <closingLaneReroute id="233673415#1_1" allow="authority"/>
-      <closingLaneReroute id="233673415#2_1" allow="authority"/>
-      <closingLaneReroute id="233673415#3_1" allow="authority"/>
-      <closingLaneReroute id="233673416_1" allow="authority"/>
-      <closingLaneReroute id="233673416_2" allow="authority"/>
-      <closingLaneReroute id="233673421_1" allow="authority"/>
-      <closingLaneReroute id="233673421_3" allow="authority"/>
-      <closingLaneReroute id="233673424#0_1" allow="authority"/>
-      <closingLaneReroute id="266885721#0_1" allow="authority"/>
-      <closingLaneReroute id="266885722_2" allow="authority"/>
-      <closingLaneReroute id="266885723#0_3" allow="authority"/>
-      <closingLaneReroute id="266887586_3" allow="authority"/>
-      <closingLaneReroute id="266887587_3" allow="authority"/>
-      <closingLaneReroute id="266887588#0_3" allow="authority"/>
-      <closingLaneReroute id="266887589#0_3" allow="authority"/>
-      <closingLaneReroute id="266887589#1_2" allow="authority"/>
-      <closingLaneReroute id="266887589#2_3" allow="authority"/>
-      <closingLaneReroute id="266887589#3_3" allow="authority"/>
-      <closingLaneReroute id="266887591_3" allow="authority"/>
-      <closingLaneReroute id="266887592_3" allow="authority"/>
-      <closingLaneReroute id="266887593#1_2" allow="authority"/>
-      <closingLaneReroute id="266887593#2_2" allow="authority"/>
-      <closingLaneReroute id="266887593#3_2" allow="authority"/>
-      <closingLaneReroute id="266887593#4_3" allow="authority"/>
-      <closingLaneReroute id="266887593#6_3" allow="authority"/>
-      <closingLaneReroute id="27453586#0_3" allow="authority"/>
-      <closingLaneReroute id="28593900_1" allow="authority"/>
-      <closingLaneReroute id="305496619#0_0" allow="authority"/>
-      <closingLaneReroute id="305496619#2_1" allow="authority"/>
-      <closingLaneReroute id="350320331#0_3" allow="authority"/>
-      <closingLaneReroute id="350320331#1_3" allow="authority"/>
-      <closingLaneReroute id="380271165#0_1" allow="authority"/>
-      <closingLaneReroute id="4058147#0_1" allow="authority"/>
-      <closingLaneReroute id="4058147#1_1" allow="authority"/>
-      <closingLaneReroute id="450094703_1" allow="authority"/>
-      <closingLaneReroute id="450094709_1" allow="authority"/>
-      <closingLaneReroute id="450094710_1" allow="authority"/>
-      <closingLaneReroute id="450094712_3" allow="authority"/>
-      <closingLaneReroute id="450094713_3" allow="authority"/>
-      <closingLaneReroute id="450094714_2" allow="authority"/>
-      <closingLaneReroute id="589179144_3" allow="authority"/>
-      <closingLaneReroute id="718850688_1" allow="authority"/>
-      <closingLaneReroute id="718850689_1" allow="authority"/>
-      <closingLaneReroute id="726515357_1" allow="authority"/>
-      <closingLaneReroute id="816754680_3" allow="authority"/>
-    </interval>
-  </rerouter>
+  <variableSpeedSign id="slowdown_corridor_0704_0" lanes="-115881046_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_1" lanes="-146973225#1.38_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_2" lanes="-146973225#1.38_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_3" lanes="-146973225#1.38_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_4" lanes="-146973225#1_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_5" lanes="-146973225#1_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_6" lanes="-146973225#2_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_7" lanes="-146973225#2_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_8" lanes="-146973225#3_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_9" lanes="-146973225#3_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_10" lanes="-168853055#0_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_11" lanes="-168853055#1_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_12" lanes="-201926267#1_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_13" lanes="-201926267#1_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_14" lanes="-201926267#1_4">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_15" lanes="-201926267#3_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_16" lanes="-201926267#3_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_17" lanes="-201926268#1_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_18" lanes="-201926268#1_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_19" lanes="-201926268#1_4">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_20" lanes="-233673411#0_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_21" lanes="-233673411#0_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_22" lanes="-233673411#0_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_23" lanes="-233673411#1_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_24" lanes="-233673411#1_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_25" lanes="-233673412#1_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_26" lanes="-233673412#1_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_27" lanes="-233673414#0_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_28" lanes="-233673414#0_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_29" lanes="-233673414#1_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_30" lanes="-233673414#1_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_31" lanes="-233673414#2_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_32" lanes="-233673414#2_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_33" lanes="-233673414#3_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_34" lanes="-233673414#3_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_35" lanes="-233673414#5_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_36" lanes="-233673414#5_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_37" lanes="-233673414#7_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_38" lanes="-233673414#7_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_39" lanes="-233673414#8_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_40" lanes="-233673414#8_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_41" lanes="-233673415#0_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_42" lanes="-233673415#0_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_43" lanes="-233673415#0_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_44" lanes="-233673415#1_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_45" lanes="-233673415#1_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_46" lanes="-233673415#1_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_47" lanes="-233673415#2.19_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_48" lanes="-233673415#2.19_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_49" lanes="-233673415#2.19_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_50" lanes="-233673415#2_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_51" lanes="-233673415#2_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_52" lanes="-233673415#3_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_53" lanes="-233673415#3_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_54" lanes="-233673416_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_55" lanes="-233673416_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_56" lanes="-233673421_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_57" lanes="-233673421_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_58" lanes="-233673424#0_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_59" lanes="-233673424#1_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_60" lanes="-243554732_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_61" lanes="-266887588#0_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_62" lanes="-266887588#0_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_63" lanes="-266887589#0_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_64" lanes="-266887589#0_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_65" lanes="-266887589#1_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_66" lanes="-266887589#1_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_67" lanes="-266887589#2_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_68" lanes="-266887589#2_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_69" lanes="-266887589#3_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_70" lanes="-266887589#3_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_71" lanes="-266887591_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_72" lanes="-266887591_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_73" lanes="-266887591_4">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_74" lanes="-266887593#1_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_75" lanes="-266887593#1_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_76" lanes="-266887593#2_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_77" lanes="-266887593#2_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_78" lanes="-266887593#3_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_79" lanes="-266887593#3_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_80" lanes="-266887593#4_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_81" lanes="-266887593#4_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_82" lanes="-266887593#6_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_83" lanes="-266887593#6_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_84" lanes="-305496618#0_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_85" lanes="-305496618#0_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_86" lanes="-305496618#2_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_87" lanes="-305496618#2_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_88" lanes="-305496618#3_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_89" lanes="-305496618#3_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_90" lanes="-305496619#1_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_91" lanes="-305496619#1_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_92" lanes="-305496619#2_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_93" lanes="-305496619#2_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_94" lanes="-48444993_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_95" lanes="-48444993_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_96" lanes="-589179144_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_97" lanes="-589179144_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_98" lanes="111525329_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_99" lanes="111525329_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_100" lanes="111525330#0_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_101" lanes="111525330#0_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_102" lanes="111525330#1_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_103" lanes="111525330#1_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_104" lanes="115881046_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_105" lanes="146973225#1.37_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_106" lanes="146973225#1.37_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_107" lanes="146973225#1.37_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_108" lanes="146973225#1_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_109" lanes="146973225#1_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_110" lanes="146973225#2_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_111" lanes="146973225#2_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_112" lanes="146973225#2_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_113" lanes="146973225#3_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_114" lanes="146973225#3_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_115" lanes="146973225#3_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_116" lanes="161680736_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_117" lanes="161680736_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_118" lanes="161680739_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_119" lanes="161680739_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_120" lanes="161680744#0_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_121" lanes="161680744#0_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_122" lanes="161680744#1_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_123" lanes="161680744#1_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_124" lanes="168853055#0_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_125" lanes="168853055#1_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_126" lanes="168853055#2_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_127" lanes="201926267#1_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_128" lanes="201926267#1_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_129" lanes="201926267#3_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_130" lanes="201926267#3_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_131" lanes="201926268#1_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_132" lanes="201926268#1_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_133" lanes="233673411#0_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_134" lanes="233673411#0_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_135" lanes="233673411#0_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_136" lanes="233673411#1_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_137" lanes="233673411#1_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_138" lanes="233673411#1_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_139" lanes="233673411#1_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_140" lanes="233673412#1_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_141" lanes="233673414#0_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_142" lanes="233673414#0_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_143" lanes="233673414#1_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_144" lanes="233673414#1_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_145" lanes="233673414#2_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_146" lanes="233673414#2_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_147" lanes="233673414#3_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_148" lanes="233673414#3_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_149" lanes="233673414#5_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_150" lanes="233673414#5_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_151" lanes="233673414#7_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_152" lanes="233673414#7_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_153" lanes="233673414#8_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_154" lanes="233673414#8_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_155" lanes="233673415#0_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_156" lanes="233673415#0_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_157" lanes="233673415#1_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_158" lanes="233673415#1_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_159" lanes="233673415#2_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_160" lanes="233673415#2_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_161" lanes="233673415#3_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_162" lanes="233673415#3_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_163" lanes="233673416_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_164" lanes="233673416_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_165" lanes="233673416_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_166" lanes="233673421_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_167" lanes="233673421_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_168" lanes="233673421_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_169" lanes="233673421_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_170" lanes="233673424#0_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_171" lanes="233673424#0_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_172" lanes="233673424#1_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_173" lanes="233673424#1_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_174" lanes="233673424#1_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_175" lanes="266885721#0_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_176" lanes="266885721#0_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_177" lanes="266885722_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_178" lanes="266885722_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_179" lanes="266885722_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_180" lanes="266885723#0_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_181" lanes="266885723#0_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_182" lanes="266885723#0_4">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_183" lanes="266887586_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_184" lanes="266887586_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_185" lanes="266887586_4">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_186" lanes="266887587_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_187" lanes="266887587_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_188" lanes="266887588#0_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_189" lanes="266887588#0_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_190" lanes="266887588#0_4">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_191" lanes="266887589#0_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_192" lanes="266887589#0_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_193" lanes="266887589#1_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_194" lanes="266887589#1_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_195" lanes="266887589#2_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_196" lanes="266887589#2_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_197" lanes="266887589#3_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_198" lanes="266887589#3_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_199" lanes="266887591_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_200" lanes="266887591_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_201" lanes="266887591_4">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_202" lanes="266887592_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_203" lanes="266887592_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_204" lanes="266887592_4">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_205" lanes="266887593#1_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_206" lanes="266887593#1_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_207" lanes="266887593#2_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_208" lanes="266887593#2_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_209" lanes="266887593#3_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_210" lanes="266887593#3_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_211" lanes="266887593#4_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_212" lanes="266887593#4_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_213" lanes="266887593#6_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_214" lanes="266887593#6_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_215" lanes="27453586#0_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_216" lanes="27453586#0_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_217" lanes="27453586#0_4">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_218" lanes="28593900_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_219" lanes="28593900_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_220" lanes="305496618#0_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_221" lanes="305496618#0_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_222" lanes="305496618#2_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_223" lanes="305496618#2_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_224" lanes="305496618#3_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_225" lanes="305496618#3_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_226" lanes="305496619#0_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_227" lanes="305496619#0_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_228" lanes="305496619#2_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_229" lanes="305496619#2_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_230" lanes="350320331#0_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_231" lanes="350320331#0_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_232" lanes="350320331#1_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_233" lanes="350320331#1_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_234" lanes="380271165#0_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_235" lanes="380271165#0_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_236" lanes="4058147#0_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_237" lanes="4058147#0_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_238" lanes="4058147#1_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_239" lanes="4058147#1_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_240" lanes="450094703_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_241" lanes="450094703_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_242" lanes="450094703_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_243" lanes="450094709_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_244" lanes="450094709_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_245" lanes="450094709_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_246" lanes="450094710_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_247" lanes="450094710_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_248" lanes="450094712_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_249" lanes="450094712_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_250" lanes="450094712_4">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_251" lanes="450094713_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_252" lanes="450094713_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_253" lanes="450094714_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_254" lanes="450094714_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_255" lanes="450094714_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_256" lanes="48444993_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_257" lanes="48444993_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_258" lanes="589179144_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_259" lanes="589179144_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_260" lanes="718850688_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_261" lanes="718850688_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_262" lanes="718850689_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_263" lanes="718850689_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_264" lanes="726515357_0">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_265" lanes="726515357_1">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_266" lanes="816754679_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_267" lanes="816754679_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_268" lanes="816754679_4">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_269" lanes="816754680_2">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
+  <variableSpeedSign id="slowdown_corridor_0704_270" lanes="816754680_3">
+    <step time="46800" speed="4.17"/>
+    <step time="50400" speed="-1"/>
+  </variableSpeedSign>
 </additional>

@@ -1,0 +1,44 @@
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+  <!-- Predictive-routing co-simulation WITH the event overlay (RQ3 / paper 2),
+       test day 2023-07-04. Driven by FleetPy via
+       fleetpy/src/coupling/SUMO/SUMOFleetPyServer.py, NOT by the vaas run.py.
+
+       Identical to 2023-07-04_rq3_cosim.sumocfg except that
+       2023-07-04_rq3_event_corridor.add.xml is appended to additional-files,
+       applying the corridor-scale lane blockage from 13:00 to 14:00 (Manchinger Strasse, the arterial carrying the largest share of AMoD trips (12.1%). 115 edges, 145 lanes closed).
+       Everything else (calibration, background demand, amod vType) is held
+       fixed so the event and no-event cells differ in one factor only.
+
+       run_rq3_routing.sh selects this config for any cell whose scenario name
+       carries `_evt`, and fails loudly if it is missing rather than falling
+       back to the no-event config.
+
+       ⚠️ ignore-route-errors is NOT set here. SUMOFleetPyServer builds its own
+       command line, so the flag has to be passed there; a lane blockage can
+       leave a PT vehicle with no path to its fixed stop, which would otherwise
+       abort the whole co-simulation.
+
+       Note that SUMOFleetPyServer passes its generated edgeData config via -a,
+       and SUMO's -a REPLACES this list rather than extending it; the server
+       merges these entries back in (src/coupling/SUMO/sumocfg_utils.py).
+       Without that merge the traffic lights, WAUT, public transport and this
+       event add-file are all silently dropped, which would produce a no-event
+       run under an event name. -->
+  <input>
+    <net-file value="ingolstadt_net.net.xml" />
+    <route-files value="Routes/routes_2023-07-04_24h_det_calib.rou.xml.gz" />
+    <additional-files value="TL/2023-07-04_tlLogics_24h.tll.xml, TL/2023-07-04_WAUT.xml, PT/pt_stops.add.xml, PT/2023-07-04_gtfs_trips.rou.xml, rq3_amod_vtype.add.xml, 2023-07-04_rq3_event_corridor.add.xml" />
+  </input>
+  <time>
+    <begin value="00:00:00" />
+    <end value="24:00:00" />
+  </time>
+  <processing>
+    <step-length value="1" />
+    <scale value="0.85" />
+    <ignore-junction-blocker value="15" />
+    <time-to-teleport value="60" />
+    <max-depart-delay value="100" />
+    <device.rerouting.probability value="0.5" />
+  </processing>
+</configuration>

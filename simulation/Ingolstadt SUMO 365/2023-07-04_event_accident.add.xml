@@ -1,22 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Event 2 (supply shortage): accident closing the busiest LDD-instrumented
-     primary arterial 29119849#1 (53 m, ~97 veh/km morning peak) from 08:00 to
-     09:30 (28800-34200 s). docs/5_rq3_event_scenarios.md sec 4.
+<!-- Event 2 (supply shortage): accident blocking two of the three motor lanes of
+     the busiest LDD-instrumented primary arterial 29119849#1 (53 m, ~97 veh/km
+     morning peak) from 08:00 to 09:30 (28800-34200 s).
+     docs/5_rq3_event_scenarios.md sec 4.
+
+     Lane topology constrains this. _0 is a pedestrian lane and _1 a bicycle
+     lane; of the three motor lanes, _2 and _3 both run straight to 29119850
+     (788 and 551 veh in the window) and _4 is left-turn-only to -gneE9 (62 veh).
+     Closing _2+_3 would strand all 1,339 through vehicles, so the blockage takes
+     _3 and _4 and leaves _2 open: through traffic keeps a route at half
+     capacity and queues, rather than being deleted from the network.
 
      allow="authority" is load-bearing, not decoration. Until 2026-08-08 this
-     closingReroute carried no allow/disallow, so SUMO applied no permission
-     change and the edge stayed fully passable: 1401 (baseline) vs 1404 (event)
-     vehicles entered it over the window, i.e. the closure closed nothing. The
-     attribute is what restricts the edge; keeping emergency response on it is
-     also what a real accident scene looks like.
+     file used a bare <closingReroute/> with no allow/disallow, which applies no
+     permission change at all: the edge stayed fully passable and 1401
+     (baseline) vs 1404 (event) vehicles entered it, so the event did nothing.
 
-     Verified by scripts/simulation/smoke_event_closure.py: entries fall from
-     70.7 to 11.0 per 300 s bin at 28800 and the link's sampled vehicle-time
-     goes to zero. Pinned by tests/routing/test_event_injection.py. -->
+     Measured against the no-event counterfactual over 07:30-08:30
+     (scripts/simulation/smoke_event_closure.py): link density rises to 79.8 from
+     65 veh/km and speed falls to 2.1-4.5 m/s, mean network trip duration +5.9 s,
+     while wrongLane teleports stay at 31 against 13 no-event. A full closure of
+     all three motor lanes was tried first and rejected: it stranded the half of
+     the background traffic that carries no rerouting device, taking wrongLane
+     teleports to 84, and produced LESS network delay (+2.9 s) because it removed
+     the traffic instead of queueing it.
+
+     Pinned by tests/routing/test_event_injection.py. -->
 <additional>
   <rerouter id="accident_0704" edges="29119849#1">
     <interval begin="28800" end="34200">
-      <closingReroute id="29119849#1" allow="authority"/>
+      <closingLaneReroute id="29119849#1_3" allow="authority"/>
+      <closingLaneReroute id="29119849#1_4" allow="authority"/>
     </interval>
   </rerouter>
 </additional>

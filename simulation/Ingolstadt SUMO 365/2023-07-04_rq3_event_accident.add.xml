@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Event overlay for the predictive-routing co-simulation (RQ3 / paper 2),
+     test day 2023-07-04. Selected by 2023-07-04_rq3_cosim_event.sumocfg, which
+     run_rq3_routing.sh picks for any cell whose scenario name carries `_evt`.
+
+     SAME disruption as paper 1's morning event (docs/5 sec 4): the same link
+     29119849#1, the same two motor lanes (_3 through, _4 left-turn), the same
+     allow="authority". Only the WINDOW differs, and it has to: paper 1's
+     08:00-09:30 is disjoint from the routing evaluation window, so an event
+     retimed here is the only way to put a disruption in front of the router.
+
+     13:00-14:00 (46800-50400 s) sits inside the routing evaluation window
+     (45000-52200), leaving 30 min of undisturbed run before it and 30 min of
+     recovery after it. Duration is 60 min rather than paper 1's 90 so that both
+     shoulders fit; state that difference rather than implying parity on it.
+
+     The link carries midday traffic comparable to its morning peak, which is
+     why it stays the right choice: 66.1 vehicles entering per 300 s bin over
+     13:00-14:00 against 77.8 over the morning window, mean density 67.3 against
+     84.0 veh/km. A blockage here is not a null by construction.
+
+     ⚠️ Do NOT retime paper 1's 2023-07-04_event_accident.add.xml to serve this
+     purpose. Its affected-area figures and section 5.3 numbers pin that window.
+     -->
+<additional>
+  <rerouter id="accident_0704_rq3" edges="29119849#1">
+    <interval begin="46800" end="50400">
+      <closingLaneReroute id="29119849#1_3" allow="authority"/>
+      <closingLaneReroute id="29119849#1_4" allow="authority"/>
+    </interval>
+  </rerouter>
+</additional>

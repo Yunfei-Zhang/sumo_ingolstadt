@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Event 2 (supply shortage), RETIMED to 13:00-14:30 (46800-52200 s).
+
+     Identical to 2023-07-04_event_accident.add.xml in every respect but the
+     interval: same edge 29119849#1, same lanes _3 and _4, same
+     allow="authority", same 90-minute duration.
+
+     Why it was retimed (docs/9, 2026-08-21). The original ran 08:00-09:30, but
+     a GNN sample needs 24 history bins of 300 s and the simulation begins at
+     07:00, so the earliest sample whose target can be scored is anchored at
+     09:00. Counting target bins by the builder's convention
+     (src/prediction/unclipped_truth.py), the 08:00 closure reaches only 15 of
+     684 target bins (2.2%) and per horizon step h1..h6 = 5, 4, 3, 2, 1, 0. No
+     sample has both ends of the h1->h6 change disturbed, so the change metric
+     the event evaluation reports was never measured across a disturbed
+     interval, and the first 60 of the closure's 90 minutes existed only inside
+     the first sample's input history. The onset, the part with forecasting
+     value, was never a prediction target.
+
+     Why 13:00 and not an earlier simulation start. Starting the run at 06:00
+     would keep the morning peak, but every training day starts at 07:00 and so
+     carries samples from 09:00 only. A test day scored from 08:00 would be
+     predicting a time of day the model has never trained on, which would
+     confound the disruption with an unseen input distribution.
+
+     13:00-14:30 gives 23 of 114 samples touching the closure, 108 of 684 target
+     bins (15.8%), and 13 samples with all six bins inside it. The start also
+     matches the corridor and cordon slowdowns (46800-50400), so the three
+     disruptions become comparable in time of day.
+
+     The trade is real and should be stated wherever this is used: midday
+     carries less demand than the morning peak, so the same closure bites less
+     hard. What it buys is that the closure is measured at all.
+
+     Pinned by tests/routing/test_event_injection.py. -->
+<additional>
+  <rerouter id="accident_0704_midday" edges="29119849#1">
+    <interval begin="46800" end="52200">
+      <closingLaneReroute id="29119849#1_3" allow="authority"/>
+      <closingLaneReroute id="29119849#1_4" allow="authority"/>
+    </interval>
+  </rerouter>
+</additional>

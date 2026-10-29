@@ -3,7 +3,7 @@
   <!-- As 2023-07-03_rq3_cosim.sumocfg, plus 2023-07-03_rq3_event_plan.add.xml. --><input>
     <net-file value="ingolstadt_net.net.xml" />
     <route-files value="Routes/routes_2023-07-03_24h_det_calib.rou.xml.gz" />
-    <additional-files value="TL/2023-07-03_tlLogics_24h.tll.xml, TL/2023-07-03_WAUT.xml, PT/pt_stops.add.xml, PT/2023-07-03_gtfs_trips.rou.xml, rq3_amod_vtype.add.xml, 2023-07-03_rq3_event_plan.add.xml" />
+    <additional-files value="PT/pt_stops.add.xml, PT/2023-07-03_gtfs_trips.rou.xml, rq3_amod_vtype.add.xml, 2023-07-03_rq3_event_plan.add.xml" />
   </input>
   <time>
     <begin value="00:00:00" />

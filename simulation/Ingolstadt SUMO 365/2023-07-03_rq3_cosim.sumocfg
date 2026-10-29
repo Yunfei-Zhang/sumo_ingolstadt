@@ -1,9 +1,9 @@
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
   
-  <!-- Predictive-routing co-simulation (paper 2), test day 2023-07-03, written by scripts/routing/make_day_configs.py from 2023-07-04_rq3_cosim.sumocfg: the same calibration and amod vType, the day's own routes, signal plans, WAUT and transit. --><input>
+  <!-- Predictive-routing co-simulation (paper 2), test day 2023-07-03, written by scripts/routing/make_day_configs.py from 2023-07-04_rq3_cosim.sumocfg: the same calibration and amod vType, the day's own routes and transit; built-in signal programs, as in the simulations the travel-time tables come from. --><input>
     <net-file value="ingolstadt_net.net.xml" />
     <route-files value="Routes/routes_2023-07-03_24h_det_calib.rou.xml.gz" />
-    <additional-files value="TL/2023-07-03_tlLogics_24h.tll.xml, TL/2023-07-03_WAUT.xml, PT/pt_stops.add.xml, PT/2023-07-03_gtfs_trips.rou.xml, rq3_amod_vtype.add.xml" />
+    <additional-files value="PT/pt_stops.add.xml, PT/2023-07-03_gtfs_trips.rou.xml, rq3_amod_vtype.add.xml" />
   </input>
   <time>
     <begin value="00:00:00" />
